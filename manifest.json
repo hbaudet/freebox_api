@@ -3,10 +3,12 @@
   "name": "Unrestrict and remote DL",
   "version": "1.0",
   "description": "Unrestrict and send to freebox",
-  "permissions": ["contextMenus", "scripting", "notifications"],
+  "options_page": "options/options.html",
+  "permissions": ["contextMenus", "scripting", "notifications", "storage", "tabs"],
   "host_permissions": ["<all_urls>"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "icons": {
     "16": "icon.png",

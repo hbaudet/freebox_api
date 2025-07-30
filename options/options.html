@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Configuration</title>
+        <link rel="stylesheet" href="options.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Configuration</h1>
+        <form>
+            <section>
+                <h2>Débridement</h2>
+                    <label>
+                        DebridLink API Key:
+                        <input type="text" id="debridLinkKey">
+                    </label>
+            </section>
+            <section>
+                <h2>Freebox</h2>
+                    <label>
+                        App Token:
+                        <input type="text" id="freeboxToken">
+                    </label>
+
+                    <label>
+                        Url:
+                        <input type="text" id="freeboxUrl">
+                    </label>
+
+                    <label>
+                        Port:
+                        <input type="text" id="freeboxPort" value="80">
+                    </label>
+            </section>
+            <button id="save" type="button">Enregistrer</button>
+        </form>
+
+        <section id="getToken">
+            <h2>Demande de Token Freebox</h2>
+            <div>
+                <label>
+                    Url Locale
+                    <input type="text" id="freeboxLocalUrl" value="http://mafreebox.freebox.fr">
+                </label>
+                <button id="getTokenBtn">Demander un Token Freebox</button>
+                <div id="status" style="display:none;">
+                    <p id="token"></p>
+                    <p id="id"></p>
+                    <p style="font-size: large;">Authoriser le token manuellement depuis l'afficheur de la Freebox</p>
+                    <button id="statusBtn">Vérifier Statut</button>
+                    <button id="storeToken">Appliquer</button>
+                </div>
+            </div>
+        </section>
+
+        <script type="module" src="options.js"></script>
+    </body>
+</html>
